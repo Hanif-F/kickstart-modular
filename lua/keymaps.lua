@@ -17,10 +17,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -46,3 +46,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- 'jj' in insert mode to exit out of insert mode
+vim.keymap.set('i', 'jj', '<Esc>')
+
+-- shortcut for Go's err not nil
+vim.keymap.set('i', 'xx', 'if err != nil {<Enter>}<Esc>O')
+
+-- Open explorer
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Open explorer' })
+
+vim.keymap.set('n', '<leader>tt', '<cmd>Trouble diagnostics toggle<cr>', { desc = 'Toggle Trouble list' })
+vim.keymap.set('n', '<leader>tr', vim.cmd.TroubleRefresh, { desc = 'Refresh Trouble list' })
+
+-- Toggle folds under cursor
+vim.keymap.set('n', 'ff', 'za', { desc = 'Toggle folds under cursor' })
+vim.keymap.set('n', 'fa', 'zA', { desc = 'Toggle all folds under cursor' })

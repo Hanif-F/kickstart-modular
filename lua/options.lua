@@ -51,7 +51,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = 'ت ', trail = '٠', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -63,3 +63,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.opt.whichwrap:append '<,>,[,],h,l' -- wraps around at the end of line
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true

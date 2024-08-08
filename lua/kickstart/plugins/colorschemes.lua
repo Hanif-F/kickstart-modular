@@ -10,10 +10,29 @@ return {
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+  {
+    'uloco/bluloco.nvim',
+    lazy = false,
+    priority = 1000,
+    dependencies = { 'rktjmp/lush.nvim' },
+    config = function()
+      -- your optional config goes here, see below.
+      require('bluloco').setup {
+        style = 'auto', -- "auto" | "dark" | "light"
+        transparent = true,
+        italics = false,
+        terminal = vim.fn.has 'gui_running' == 1, -- bluoco colors are enabled in gui terminals per default.
+        guicursor = true,
+      }
+
+      vim.opt.termguicolors = true
+      -- vim.cmd('colorscheme bluloco')
+      vim.cmd.colorscheme 'bluloco'
     end,
   },
 }
