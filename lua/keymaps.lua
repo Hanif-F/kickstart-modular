@@ -57,7 +57,7 @@ vim.keymap.set('i', 'xx', 'if err != nil {<Enter>}<Esc>O', { desc = 'Go handle e
 vim.keymap.set(
   'i',
   'x!',
-  '<!DOCTYPE html><Enter><html lang="en"><Enter><Tab><head><Enter><Tab><Tab><meta charset="UTF-8"><Enter><Tab><Tab><meta name="viewport" content="width=device-width, initial-scale=1.0"><Enter><Tab><Tab><title></title><Enter><Tab></head><Enter><Tab><body><Enter><Tab></body><Enter></html><Esc>kO<Tab><Tab>',
+  '<!DOCTYPE html><Enter><html lang="en"><Enter><head><Enter><meta charset="UTF-8"><Enter><meta name="viewport" content="width=device-width, initial-scale=1.0"><Enter><title></title><Enter></head><Enter><body><Enter></body><Enter></html><Esc>kO',
   { desc = 'Insert HTML boiler plate' }
 )
 
