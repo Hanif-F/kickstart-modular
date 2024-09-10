@@ -48,10 +48,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- 'jj' in insert mode to exit out of insert mode
-vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit out of insert mode' })
 
 -- shortcut for Go's err not nil
-vim.keymap.set('i', 'xx', 'if err != nil {<Enter>}<Esc>O')
+vim.keymap.set('i', 'xx', 'if err != nil {<Enter>}<Esc>O', { desc = 'Go handle error' })
+
+-- shortcut for HTML boiler plate
+vim.keymap.set(
+  'i',
+  'x!',
+  '<!DOCTYPE html><Enter><html lang="en"><Enter><Tab><head><Enter><Tab><Tab><meta charset="UTF-8"><Enter><Tab><Tab><title></title><Enter><Tab></head><Enter><Tab><body><Enter><Tab></body><Enter></html><Esc>kO<Tab><Tab>',
+  { desc = 'Insert HTML boiler plate' }
+)
 
 -- Open explorer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Open explorer' })
