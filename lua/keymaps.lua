@@ -51,12 +51,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit out of insert mode' })
 
 -- shortcut for Go's err not nil
-vim.keymap.set('i', 'xx', 'if err != nil {<Enter>}<Esc>O', { desc = 'Go handle error' })
+vim.keymap.set('i', '|x', 'if err != nil {<Enter>}<Esc>O', { desc = 'Go handle error' })
 
 -- shortcut for HTML boiler plate
 vim.keymap.set(
   'i',
-  'x!',
+  '|!',
   '<!DOCTYPE html><Enter><html lang="en"><Enter><head><Enter><meta charset="UTF-8"><Enter><meta name="viewport" content="width=device-width, initial-scale=1.0"><Enter><title></title><Enter></head><Enter><body><Enter></body><Enter></html><Esc>kO',
   { desc = 'Insert HTML boiler plate' }
 )
