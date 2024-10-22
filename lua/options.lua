@@ -51,7 +51,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = 'ت ', trail = '٠', nbsp = '␣' }
+vim.opt.listchars = { tab = '>>', trail = '٠', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
