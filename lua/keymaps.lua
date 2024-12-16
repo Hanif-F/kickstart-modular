@@ -70,3 +70,7 @@ vim.keymap.set('n', '<leader>tr', vim.cmd.TroubleRefresh, { desc = 'Refresh Trou
 -- Toggle folds under cursor
 vim.keymap.set('n', 'ff', 'za', { desc = 'Toggle folds under cursor' })
 vim.keymap.set('n', 'fa', 'zA', { desc = 'Toggle all folds under cursor' })
+
+-- Scroll virtual line instead to scroll wrapped line.
+vim.keymap.set('n', 'k', 'gk', { desc = 'Scroll up virtual line' })
+vim.keymap.set('n', 'j', 'gj', { desc = 'Scroll down virtual line' })
