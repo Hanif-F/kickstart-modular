@@ -79,3 +79,5 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt.softtabstop = 2
   end,
 })
+
+vim.opt.wrap = false
