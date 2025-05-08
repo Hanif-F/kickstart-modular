@@ -23,3 +23,11 @@ require 'lazy-plugins'
 -- vim: ts=2 sts=2 sw=2 et
 
 vim.cmd.colorscheme 'bluloco'
+
+-- Show inline error messages (virtual text), signs in gutter, and underlines
+vim.diagnostic.config {
+  virtual_text = true, -- Inline error messages
+  signs = true, -- Error icons in the gutter
+  underline = false, -- Underline problematic code
+  update_in_insert = false,
+}
